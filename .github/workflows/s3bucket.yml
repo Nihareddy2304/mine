@@ -24,3 +24,4 @@ jobs:
             --bucket niha-sample-bucket-2304 \
             --region us-east-1 \
             --create-bucket-configuration LocationConstraint=us-east-1
+
