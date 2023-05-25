@@ -12,15 +12,15 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Set up AWS credentials
-        uses: aws-actions/configure-aws-credentials@main
+        uses: aws-actions/configure-aws-credentials@v1
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: us-east-1 
+          aws-region: us-east-1  # Replace with your desired AWS region
 
       - name: Create S3 bucket
         run: |
           aws s3api create-bucket \
-            --bucket nihasamplebucket2304 \
-            --region us-east-1
+            --bucket niha-sample-bucket-2304 \
+            --region us-east-1 \
             --create-bucket-configuration LocationConstraint=us-east-1
